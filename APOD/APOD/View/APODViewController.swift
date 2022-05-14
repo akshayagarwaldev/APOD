@@ -8,7 +8,7 @@
 import UIKit
 
 class APODViewController: UIViewController, AstronomyDataDelegate {
-
+    
     @IBOutlet weak var astronomyImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explanationLabel: UILabel!
@@ -19,25 +19,31 @@ class APODViewController: UIViewController, AstronomyDataDelegate {
         super.viewDidLoad()
         if UserDefaults.lastDate == nil {
             if !Reachability.isConnectedToNetwork() {
+                showNoNetworkAlert()
                 fetchLastDateAstronomy()
-                let alert = UIAlertController(title: "Error", message: "Not connected to Internet!", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
             } else {
                 astronomyViewModel.getAstronomyDataFromNetwork()
             }
         } else {
             fetchLastDateAstronomy()
         }
-        UserDefaults.lastDate = Date.now
         astronomyViewModel.delegate = self
     }
     
+    func showNoNetworkAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: "Not connected to Internet!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func fetchLastDateAstronomy() {
-        self.titleLabel.text = UserDefaults.standard.value(forKey: "title") as? String
-        self.explanationLabel.text = UserDefaults.standard.value(forKey: "explanation") as? String
-//        self.astronomyImageView.image = UserDefaults.standard.value(forKey: "image") as? UIImage
-        
+        DispatchQueue.main.async {
+            self.titleLabel.text = UserDefaults.standard.value(forKey: "title") as? String
+            self.explanationLabel.text = UserDefaults.standard.value(forKey: "explanation") as? String
+            self.astronomyImageView.image = loadImageFromDiskWith(fileName: "astronomy")
+        }
     }
     
     func didFetchAstronomyData(_ astronomyData: Astronomy?, _ error: Error?) {
@@ -50,6 +56,7 @@ class APODViewController: UIViewController, AstronomyDataDelegate {
         }
         
         if let astronomyData = astronomyData {
+            UserDefaults.lastDate = Date.now
             UserDefaults.standard.set(astronomyData.title, forKey: "title")
             UserDefaults.standard.set(astronomyData.explanation, forKey: "explanation")
             updateUI(astronomyData)

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-func saveImage(imageName: String, image: UIImage) {
+public func saveImage(imageName: String, image: UIImage) {
  guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
 
     let fileName = imageName
@@ -35,7 +35,7 @@ func saveImage(imageName: String, image: UIImage) {
 }
 
 
-func loadImageFromDiskWith(fileName: String) -> UIImage? {
+public func loadImageFromDiskWith(fileName: String) -> UIImage? {
   let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
 
     let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask

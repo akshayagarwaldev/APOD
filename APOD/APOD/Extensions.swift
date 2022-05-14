@@ -22,6 +22,7 @@ extension UIImageView {
                         if let data = data {
                             if let image = UIImage(data: data) {
                                 self.image = image
+                                saveImage(imageName: "astronomy", image: image)
                             }
                         }
                     }
