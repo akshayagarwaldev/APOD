@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVE-5p-FND">
+                                <rect key="frame" x="329" y="831" width="63" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="APOD"/>
+                                <connections>
+                                    <action selector="APODButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdJ-Zd-akK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iVE-5p-FND" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GZX-IE-McM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVE-5p-FND" secondAttribute="trailing" constant="22" id="ZMQ-lo-FCb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="tj8-aU-ibL" kind="show" identifier="astronomy" id="qM8-FJ-49d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="122" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4fp-gA-Ea2">
+            <objects>
+                <viewController id="tj8-aU-ibL" customClass="APODViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kft-Y4-hhI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-cw-sPm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="QOO-MB-SsG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-gf-zua">
+                                <rect key="frame" x="20" y="195" width="44.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-AI-q80">
+                                <rect key="frame" x="20" y="229.5" width="88" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E1e-Rr-Ltu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ylm-gf-zua" firstAttribute="leading" secondItem="E1e-Rr-Ltu" secondAttribute="leading" constant="20" id="Kvh-wG-iqX"/>
+                            <constraint firstItem="7Ma-cw-sPm" firstAttribute="leading" secondItem="E1e-Rr-Ltu" secondAttribute="leading" id="L83-cQ-W7w"/>
+                            <constraint firstItem="Ylm-gf-zua" firstAttribute="top" secondItem="7Ma-cw-sPm" secondAttribute="bottom" constant="20" id="OoC-FZ-JFL"/>
+                            <constraint firstItem="FzV-AI-q80" firstAttribute="top" secondItem="Ylm-gf-zua" secondAttribute="bottom" constant="15" id="TB1-Cq-gjf"/>
+                            <constraint firstItem="E1e-Rr-Ltu" firstAttribute="trailing" secondItem="7Ma-cw-sPm" secondAttribute="trailing" id="dVg-5Y-qtt"/>
+                            <constraint firstItem="FzV-AI-q80" firstAttribute="leading" secondItem="E1e-Rr-Ltu" secondAttribute="leading" constant="20" id="dt5-cc-qNV"/>
+                            <constraint firstItem="7Ma-cw-sPm" firstAttribute="top" secondItem="E1e-Rr-Ltu" secondAttribute="top" id="hVW-Y2-C7N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wuO-Yk-7oq"/>
+                    <connections>
+                        <outlet property="astronomyImageView" destination="7Ma-cw-sPm" id="Ycg-zT-4Sf"/>
+                        <outlet property="explanationLabel" destination="FzV-AI-q80" id="D5p-8E-Itn"/>
+                        <outlet property="titleLabel" destination="Ylm-gf-zua" id="YMq-Sy-4SN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geg-N0-qbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
