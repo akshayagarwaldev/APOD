@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+let baseUrl = "https://api.nasa.gov/planetary/apod?api_key="
+let apiKey = "wFdMehRg8n7jd7hNROucMwGzm2DunAvoM49Jk9PL"
