@@ -16,6 +16,7 @@
 		9DBD19BB282FF46500E7F77B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19BA282FF46500E7F77B /* Reachability.swift */; };
 		9DBD19BD282FF47500E7F77B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19BC282FF47500E7F77B /* Constants.swift */; };
 		9DBD19BF282FF4BB00E7F77B /* Astronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19BE282FF4BB00E7F77B /* Astronomy.swift */; };
+		9DBD19C1282FF66900E7F77B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C0282FF66900E7F77B /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9DBD19BA282FF46500E7F77B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9DBD19BC282FF47500E7F77B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DBD19BE282FF4BB00E7F77B /* Astronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronomy.swift; sourceTree = "<group>"; };
+		9DBD19C0282FF66900E7F77B /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9DBD19B9282FF44500E7F77B /* View */,
 				9DBD19BA282FF46500E7F77B /* Reachability.swift */,
 				9DBD19BC282FF47500E7F77B /* Constants.swift */,
+				9DBD19C0282FF66900E7F77B /* NetworkService.swift */,
 				9DBD19A9282FF40500E7F77B /* Main.storyboard */,
 				9DBD19AC282FF40700E7F77B /* Assets.xcassets */,
 				9DBD19AE282FF40700E7F77B /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				9DBD19BB282FF46500E7F77B /* Reachability.swift in Sources */,
 				9DBD19BF282FF4BB00E7F77B /* Astronomy.swift in Sources */,
 				9DBD19A6282FF40500E7F77B /* SceneDelegate.swift in Sources */,
+				9DBD19C1282FF66900E7F77B /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,12 @@
 import Foundation
 import SystemConfiguration
 
+enum NetworkError: Error {
+    case notConnected
+    case slowNetwork
+    case noData
+}
+
 public class Reachability {
 
     class func isConnectedToNetwork() -> Bool {
