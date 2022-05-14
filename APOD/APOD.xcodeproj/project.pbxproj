@@ -19,6 +19,7 @@
 		9DBD19C1282FF66900E7F77B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C0282FF66900E7F77B /* NetworkService.swift */; };
 		9DBD19C3282FF94100E7F77B /* AstronomyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C2282FF94100E7F77B /* AstronomyViewModel.swift */; };
 		9DBD19C5282FFA6600E7F77B /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C4282FFA6600E7F77B /* APODViewController.swift */; };
+		9DBD19C7283001D400E7F77B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C6283001D400E7F77B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9DBD19C0282FF66900E7F77B /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9DBD19C2282FF94100E7F77B /* AstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyViewModel.swift; sourceTree = "<group>"; };
 		9DBD19C4282FFA6600E7F77B /* APODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
+		9DBD19C6283001D400E7F77B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				9DBD19B9282FF44500E7F77B /* View */,
 				9DBD19BA282FF46500E7F77B /* Reachability.swift */,
 				9DBD19BC282FF47500E7F77B /* Constants.swift */,
+				9DBD19C6283001D400E7F77B /* Extensions.swift */,
 				9DBD19C0282FF66900E7F77B /* NetworkService.swift */,
 				9DBD19A9282FF40500E7F77B /* Main.storyboard */,
 				9DBD19AC282FF40700E7F77B /* Assets.xcassets */,
@@ -185,6 +188,7 @@
 				9DBD19A4282FF40500E7F77B /* AppDelegate.swift in Sources */,
 				9DBD19C3282FF94100E7F77B /* AstronomyViewModel.swift in Sources */,
 				9DBD19BB282FF46500E7F77B /* Reachability.swift in Sources */,
+				9DBD19C7283001D400E7F77B /* Extensions.swift in Sources */,
 				9DBD19BF282FF4BB00E7F77B /* Astronomy.swift in Sources */,
 				9DBD19C5282FFA6600E7F77B /* APODViewController.swift in Sources */,
 				9DBD19A6282FF40500E7F77B /* SceneDelegate.swift in Sources */,
