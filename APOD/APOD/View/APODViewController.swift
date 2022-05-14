@@ -17,8 +17,27 @@ class APODViewController: UIViewController, AstronomyDataDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.lastDate == nil {
+            if !Reachability.isConnectedToNetwork() {
+                fetchLastDateAstronomy()
+                let alert = UIAlertController(title: "Error", message: "Not connected to Internet!", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+            } else {
+                astronomyViewModel.getAstronomyDataFromNetwork()
+            }
+        } else {
+            fetchLastDateAstronomy()
+        }
+        UserDefaults.lastDate = Date.now
         astronomyViewModel.delegate = self
-        astronomyViewModel.getAstronomyDataFromNetwork()
+    }
+    
+    func fetchLastDateAstronomy() {
+        self.titleLabel.text = UserDefaults.standard.value(forKey: "title") as? String
+        self.explanationLabel.text = UserDefaults.standard.value(forKey: "explanation") as? String
+//        self.astronomyImageView.image = UserDefaults.standard.value(forKey: "image") as? UIImage
+        
     }
     
     func didFetchAstronomyData(_ astronomyData: Astronomy?, _ error: Error?) {
@@ -31,12 +50,17 @@ class APODViewController: UIViewController, AstronomyDataDelegate {
         }
         
         if let astronomyData = astronomyData {
+            UserDefaults.standard.set(astronomyData.title, forKey: "title")
+            UserDefaults.standard.set(astronomyData.explanation, forKey: "explanation")
             updateUI(astronomyData)
         }
     }
     
     func updateUI(_ astronomyData: Astronomy) {
         DispatchQueue.main.async { [weak self] in
+            if let imageUrl = astronomyData.url {
+                self?.astronomyImageView.imageFromURL(imageUrl)
+            }
             self?.titleLabel.text = astronomyData.title
             self?.explanationLabel.text = astronomyData.explanation
         }

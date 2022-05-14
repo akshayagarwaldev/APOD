@@ -47,19 +47,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-cw-sPm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="QOO-MB-SsG"/>
+                                    <constraint firstAttribute="height" constant="225" id="QOO-MB-SsG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-gf-zua">
-                                <rect key="frame" x="20" y="195" width="44.5" height="19.5"/>
+                                <rect key="frame" x="20" y="245" width="44.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-AI-q80">
-                                <rect key="frame" x="20" y="229.5" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="279.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
