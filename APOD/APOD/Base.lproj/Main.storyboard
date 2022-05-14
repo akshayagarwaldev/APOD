@@ -22,6 +22,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="APOD"/>
                                 <connections>
                                     <action selector="APODButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdJ-Zd-akK"/>
+                                    <segue destination="tj8-aU-ibL" kind="show" identifier="astronomy" id="wo2-dG-WA5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,9 +33,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVE-5p-FND" secondAttribute="trailing" constant="22" id="ZMQ-lo-FCb"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="tj8-aU-ibL" kind="show" identifier="astronomy" id="qM8-FJ-49d"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-AI-q80">
-                                <rect key="frame" x="20" y="229.5" width="88" height="20.5"/>
+                                <rect key="frame" x="20" y="229.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,6 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="E1e-Rr-Ltu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="E1e-Rr-Ltu" firstAttribute="trailing" secondItem="FzV-AI-q80" secondAttribute="trailing" constant="20" id="HeQ-6f-MwY"/>
                             <constraint firstItem="Ylm-gf-zua" firstAttribute="leading" secondItem="E1e-Rr-Ltu" secondAttribute="leading" constant="20" id="Kvh-wG-iqX"/>
                             <constraint firstItem="7Ma-cw-sPm" firstAttribute="leading" secondItem="E1e-Rr-Ltu" secondAttribute="leading" id="L83-cQ-W7w"/>
                             <constraint firstItem="Ylm-gf-zua" firstAttribute="top" secondItem="7Ma-cw-sPm" secondAttribute="bottom" constant="20" id="OoC-FZ-JFL"/>
