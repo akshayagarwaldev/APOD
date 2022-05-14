@@ -18,6 +18,7 @@ final class NetworkService {
         let url = URL(string: baseUrl + apiKey)
         guard let url = url else {
             print("Error: Invalid URL")
+            completion(nil, NetworkError.invalidUrl)
             return
         }
         if Reachability.isConnectedToNetwork() {

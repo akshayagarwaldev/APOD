@@ -17,6 +17,7 @@
 		9DBD19BD282FF47500E7F77B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19BC282FF47500E7F77B /* Constants.swift */; };
 		9DBD19BF282FF4BB00E7F77B /* Astronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19BE282FF4BB00E7F77B /* Astronomy.swift */; };
 		9DBD19C1282FF66900E7F77B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C0282FF66900E7F77B /* NetworkService.swift */; };
+		9DBD19C3282FF94100E7F77B /* AstronomyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD19C2282FF94100E7F77B /* AstronomyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9DBD19BC282FF47500E7F77B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DBD19BE282FF4BB00E7F77B /* Astronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronomy.swift; sourceTree = "<group>"; };
 		9DBD19C0282FF66900E7F77B /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9DBD19C2282FF94100E7F77B /* AstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		9DBD19B8282FF43E00E7F77B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9DBD19C2282FF94100E7F77B /* AstronomyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				9DBD19BD282FF47500E7F77B /* Constants.swift in Sources */,
 				9DBD19A8282FF40500E7F77B /* ViewController.swift in Sources */,
 				9DBD19A4282FF40500E7F77B /* AppDelegate.swift in Sources */,
+				9DBD19C3282FF94100E7F77B /* AstronomyViewModel.swift in Sources */,
 				9DBD19BB282FF46500E7F77B /* Reachability.swift in Sources */,
 				9DBD19BF282FF4BB00E7F77B /* Astronomy.swift in Sources */,
 				9DBD19A6282FF40500E7F77B /* SceneDelegate.swift in Sources */,

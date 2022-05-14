@@ -12,6 +12,7 @@ enum NetworkError: Error {
     case notConnected
     case slowNetwork
     case noData
+    case invalidUrl
 }
 
 public class Reachability {
